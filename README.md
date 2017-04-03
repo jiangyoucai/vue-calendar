@@ -7,8 +7,9 @@ template
 
     <v-calendar
     :show="show"
-    :date="checked"
-    :checked="checked"></v-charts>
+    :date="date"
+    :checked="date"
+    @close="show = 0"></v-charts>
 
 import
 
@@ -17,15 +18,10 @@ import
         data() {
             return {
                 show: 1,
-                checked: '2016-10-22'
+                date: '2016-10-22'
             }
         },
         computed: {},
-        watch: {
-            checked() {
-                this.show = 0
-            }
-        },
         created() {},
         methods: {},
         components: {
