@@ -19,7 +19,7 @@ import
         data() {
             return {
                 show: 1,
-                date: '2016-10-22'
+                date: '2017-04-04'
             }
         },
         computed: {},
