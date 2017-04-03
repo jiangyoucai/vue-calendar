@@ -32,8 +32,8 @@ import
 
 screenshot
 
-    ![pc](http://static.ipanpan.com/ipanpan/file_1491235270224918844.jpg)
-    ![mobile](http://static.ipanpan.com/ipanpan/file_1491235281237544823.jpg)
+![pc](http://static.ipanpan.com/ipanpan/file_1491235270224918844.jpg)
+![mobile](http://static.ipanpan.com/ipanpan/file_1491235281237544823.jpg)
 
 remark
 
