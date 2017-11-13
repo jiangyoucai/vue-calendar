@@ -1,6 +1,16 @@
 # vue-calendar
 a calendar for vue2.0
 
+#### install
+
+npm
+
+    npm install tt-vue-calendar
+
+yarn 
+
+    yarn add tt-vue-calendar
+
 #### how to use
 
 template
@@ -12,9 +22,9 @@ template
     :checked="date"
     @close="show = 0"></v-charts>
 
-import
+script
 
-    import Calendar from './Calendar'
+    import Calendar from 'tt-vue-calendar'
     export default {
         data() {
             return {

@@ -1,0 +1,24 @@
+{
+  "name": "tt-vue-calendar",
+  "version": "1.0.1",
+  "description": "a calendar component for vue",
+  "main": "./src/Calendar.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangyoucai/vue-calendar.git"
+  },
+  "keywords": [
+    "vue-calendar",
+    "calendar",
+    "vue"
+  ],
+  "author": "https://github.com/jiangyoucai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangyoucai/vue-calendar/issues"
+  },
+  "homepage": "https://github.com/jiangyoucai/vue-calendar#readme"
+}
