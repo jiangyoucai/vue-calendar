@@ -17,10 +17,11 @@ template
 
     <input class="input" type="text" v-model="date" readonly="readonly" @click="show = 1">
     <v-calendar
-    :show="show"
-    :date="date"
-    :checked="date"
-    @close="show = 0"></v-calendar>
+        :show="show"
+        :date="date"
+        v-model="date"
+        @close="show = 0">
+    </v-calendar>
 
 script
 
