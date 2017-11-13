@@ -20,7 +20,7 @@ template
     :show="show"
     :date="date"
     :checked="date"
-    @close="show = 0"></v-charts>
+    @close="show = 0"></v-calendar>
 
 script
 

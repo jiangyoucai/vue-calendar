@@ -12,22 +12,23 @@
 </template>
 
 <script>
-import Calendar from './Calendar'
+import Calendar from "tt-vue-calendar";
 export default {
-    data() {
-        return {
-            show: 1,
-            date: '2017-04-04'
-        }
-    },
-    computed: {},
-    created() {},
-    methods: {},
-    components: {
-        'v-calendar': Calendar
-    }
-}
+  data() {
+    return {
+      show: 1,
+      date: "2017-04-04"
+    };
+  },
+  computed: {},
+  created() {},
+  methods: {},
+  components: {
+    "v-calendar": Calendar
+  }
+};
 </script>
 
 <style lang="css" scoped>
+
 </style>
