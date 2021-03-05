@@ -1,50 +1,118 @@
-# vue-calendar
-a calendar for vue2.0
+# vue calendar
+a calendar component for vue3.0
 
-#### install
+## how to use
 
-npm
+template 
 
-    npm install tt-vue-calendar
+```<template>
+    <div class="container y35 ym20 fs12 cl6 t-pointer x-row x-between">
+        <!-- date -->
+        <div class="x10">
+            <Date
+                class="x100 y35 fs12 bgf br4 bcz b-border b-box t-center"
+                :calendar="date.calendar"
+                :style="date.style"
+                @submit="getDate"
+            ></Date>
+        </div>
 
-yarn 
+        <!-- time -->
+        <div class="x15">
+            <Time
+                class="x100 y35 fs12 bgf br4 bcz b-border b-box t-center"
+                :calendar="time.calendar"
+                :style="time.style"
+                @submit="getTime"
+            ></Time>
+        </div>
+    </div>
+</template>```
 
-    yarn add tt-vue-calendar
 
-#### how to use
+````<script>
+import { reactive, toRefs } from "@vue/runtime-core";
+import Date from "./Date.vue";
+import Time from "./Time.vue";
+export default {
+    setup(props, context) {
+        const data = reactive({
+            date: {
+                style: "width:266%;",
+                calendar: {
+                    mulit: false,
+                    mark: "今",
+                    disable: undefined,
+                    show: undefined,
+                },
+            },
+            time: {
+                style: "width:176%;",
+                calendar: {
+                    mulit: true,
+                    mark: "今",
+                    disable: undefined,
+                    show: undefined,
+                },
+            },
+        });
 
-template
+        const getDate = (option) => {
+            submit(3, option);
+        };
 
-    <input class="input" type="text" v-model="date" readonly="readonly" @click="show = 1">
-    <v-calendar
-        :show="show"
-        :date="date"
-        v-model="date"
-        @close="show = 0">
-    </v-calendar>
+        const getTime = (option) => {
+            submit(4, option);
+        };
 
-script
+        return {
+            ...toRefs(data),
+            getDate,
+            getTime,
+        };
+    },
+    components: {
+        Date,
+        Time,
+    },
+};
+</script>```
 
-    import Calendar from 'tt-vue-calendar'
-    export default {
-        data() {
-            return {
-                show: 1,
-                date: '2017-04-04'
-            }
+
+```<style scoped>
+@import "../assets/css/base.css";
+@import "../assets/css/flex.css";
+</style>```
+
+#### signle date
+
+    date: {
+        style: "width:266%;",
+        calendar: {
+            mulit: false,
+            mark: "今",
+            disable: undefined,
+            show: undefined,
+            date: "2021-03-06",
         },
-        computed: {},
-        created() {},
-        methods: {},
-        components: {
-            'v-calendar': Calendar
-        }
     }
+
+#### mulite date
+
+    time: {
+    style: "width:176%;",
+    calendar: {
+        mulit: true,
+        mark: "今",
+        disable: undefined,
+        show: undefined,
+        start: "2021-03-06",
+        end: "2021-03-07",
+    },
+
 
 screenshot
 
-![pc](http://static.ipanpan.com/ipanpan/file_1491235270224918844.jpg)
-![mobile](http://static.ipanpan.com/ipanpan/file_1491235281237544823.jpg)
 
 remark
 

@@ -1,34 +1,76 @@
-<template lang="html">
-    <div class="">
-        <input class="input" type="text" v-model="date" readonly="readonly" @click="show = 1">
-        <v-calendar
-           :show="show"
-           :date="date"
-           v-model="date"
-           @close="show = 0">
-        </v-calendar>
-        {{date}}
-    </div>
+<template>
+	<div class="container y35 ym20 fs12 cl6 t-pointer x-row x-between">
+		<!-- date -->
+		<div class="x10">
+			<Date
+				class="x100 y35 fs12 bgf br4 bcz b-border b-box t-center"
+				:calendar="date.calendar"
+				:style="date.style"
+				@submit="getDate"
+			></Date>
+		</div>
+
+		<!-- time -->
+		<div class="x15">
+			<Time
+				class="x100 y35 fs12 bgf br4 bcz b-border b-box t-center"
+				:calendar="time.calendar"
+				:style="time.style"
+				@submit="getTime"
+			></Time>
+		</div>
+	</div>
 </template>
 
 <script>
-import Calendar from "tt-vue-calendar";
+import { reactive, toRefs } from "@vue/runtime-core";
+import Date from "./Date.vue";
+import Time from "./Time.vue";
 export default {
-  data() {
-    return {
-      show: 1,
-      date: "2017-04-04"
-    };
-  },
-  computed: {},
-  created() {},
-  methods: {},
-  components: {
-    "v-calendar": Calendar
-  }
+	setup(props, context) {
+		const data = reactive({
+			date: {
+				style: "width:266%;",
+				calendar: {
+					mulit: false,
+					mark: "今",
+					disable: undefined,
+					show: undefined,
+				},
+			},
+			time: {
+				style: "width:176%;",
+				calendar: {
+					mulit: true,
+					mark: "今",
+					disable: undefined,
+					show: undefined,
+				},
+			},
+		});
+
+		const getDate = (option) => {
+			submit(3, option);
+		};
+
+		const getTime = (option) => {
+			submit(4, option);
+		};
+
+		return {
+			...toRefs(data),
+			getDate,
+			getTime,
+		};
+	},
+	components: {
+		Date,
+		Time,
+	},
 };
 </script>
 
-<style lang="css" scoped>
-
+<style scoped>
+@import "../assets/css/base.css";
+@import "../assets/css/flex.css";
 </style>
