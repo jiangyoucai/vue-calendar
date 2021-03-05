@@ -5,7 +5,8 @@ a calendar component for vue3.0
 
 template 
 
-```<template>
+```
+<template>
     <div class="container y35 ym20 fs12 cl6 t-pointer x-row x-between">
         <!-- date -->
         <div class="x10">
@@ -27,10 +28,12 @@ template
             ></Time>
         </div>
     </div>
-</template>```
+</template>
+```
 
 
-````<script>
+```
+<script>
 import { reactive, toRefs } from "@vue/runtime-core";
 import Date from "./Date.vue";
 import Time from "./Time.vue";
@@ -76,13 +79,16 @@ export default {
         Time,
     },
 };
-</script>```
+</script>
+```
 
 
-```<style scoped>
+```
+<style scoped>
 @import "../assets/css/base.css";
 @import "../assets/css/flex.css";
-</style>```
+</style>
+```
 
 #### signle date
 
@@ -112,7 +118,6 @@ export default {
 
 
 screenshot
-
 
 remark
 
