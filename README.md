@@ -90,7 +90,7 @@ export default {
 </style>
 ```
 
-#### signle date
+#### single date
 
     date: {
         style: "width:266%;",
@@ -103,7 +103,7 @@ export default {
         },
     }
 
-#### mulite date
+#### mulit date
 
     time: {
     style: "width:176%;",
@@ -117,8 +117,73 @@ export default {
     },
 
 
-screenshot
+## more config
 
-remark
+    option: {
+        mulit: false,
+        mark: '今',
+        disable: 'left',
+        // show: 'fee',
+        empty: false,
+        total: {
+            '2020-9-27': 99,
+            '2020-9-28': 9,
+            '2020-9-29': 1024,
+            '2020-9-30': 0,
+            '2020-10-27': 99,
+            '2020-10-28': 9,
+            '2020-10-29': 1024,
+            '2020-10-7': 0,
+            '2020-10-8': 9,
+            '2020-10-9': 10204,
+        },
+        fee: {
+            '2020-9-27': 99,
+            '2020-9-28': 9,
+            '2020-9-29': 1024,
+            '2020-9-30': 0,
+            '2020-10-27': 99,
+            '2020-10-28': 9,
+            '2020-10-29': 10204,
+            '2020-10-7': 0,
+            '2020-10-8': 9,
+            '2020-10-9': 1024,
+        },
+        customize: {
+            '2020-9-27': '休',
+            '2020-9-28': '班',
+            '2020-9-29': '休',
+            '2020-10-7': '休',
+            '2020-10-8': '初八',
+            '2020-10-9': '初九',
+        }
+    }
+
+## methods
+
+1.setDate
+
+    setDate: function (e) {
+        console.log(e)
+    }
+    
+2.setDay
+
+    setDay: function (e) {
+        console.log(e)
+    }
+   
+
+## screenshot
+
+![普通日历](http://cdn.tiantour.com/screenshot/normal.png)
+
+![库存日历](http://cdn.tiantour.com/screenshot/total.png)
+
+![价格日历](http://cdn.tiantour.com/screenshot/fee.png)
+
+![自定义日历](http://cdn.tiantour.com/screenshot/customize.png)
+
+## remark
 
     check the demo or create a issues
