@@ -5,7 +5,7 @@ a calendar component for vue3.0
 
 template 
 
-```
+```html
 <template>
     <div class="container y35 ym20 fs12 cl6 t-pointer x-row x-between">
         <!-- date -->
@@ -32,7 +32,7 @@ template
 ```
 
 
-```
+```html
 <script>
 import { reactive, toRefs } from "@vue/runtime-core";
 import Date from "./Date.vue";
@@ -83,7 +83,7 @@ export default {
 ```
 
 
-```
+```html
 <style scoped>
 @import "../assets/css/base.css";
 @import "../assets/css/flex.css";
